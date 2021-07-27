@@ -40,5 +40,5 @@ extractFile("./electron-v13.1.7-darwin-x64.zip");
 ```
 
 6. 终端执行 `node install.js` （没有任何提示）
-7. 退出到项目根目录，验证是否安装成功：
+7. 退回到项目根目录，验证是否安装成功：
    `npx electron -v`
