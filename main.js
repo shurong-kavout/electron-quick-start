@@ -5,11 +5,11 @@ const path = require('path')
 
 function createWindow() {
     // Create the browser window.
-    const { width, height } = screen.getPrimaryDisplay().workAreaSize
+    // const { width, height } = screen.getPrimaryDisplay().workAreaSize
 
     const mainWindow = new BrowserWindow({
-        width,
-        height,
+        width: 800,
+        height: 600,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             // nodeIntegration: true,
