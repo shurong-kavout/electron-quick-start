@@ -23,7 +23,7 @@
       "mirror": "https://npm.taobao.org/mirrors/electron/"
     },
     "mac": {
-      "icon": "_output/lab/favicon.icns",
+      "icon": "build/icon.icns",
       "target": "dmg"
     },
     "dmg": {
@@ -42,7 +42,7 @@
       ]
     },
     "win": {
-      "icon": "_output/lab/favicon.ico",
+      "icon": "build/icon.ico",
       "legalTrademarks": "kavout",
       "target": [
         {
@@ -62,7 +62,7 @@
     }
   },
   "linux": {
-    "icon": "_output/lab/favicon.ico",
+    "icon": "build/icon.ico"
   },
   "author": "Shurong",
   "license": "MIT",
