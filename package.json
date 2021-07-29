@@ -4,14 +4,73 @@
   "description": "Hello World!",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist:mac": "electron-builder -m",
+    "dist:win": "electron-builder -w",
+    "dist-linux": "electron-builder --l",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "author": "Jane Doe",
+  "build": {
+    "appId": "com.kavout.jupyterlite",
+    "productName": "KavoutLite",
+    "copyright": "@ 2021 Kavout",
+    "compression": "maximum",
+    "directories": {
+      "output": "/Users/kavout/Downloads/bundle"
+    },
+    "electronDownload": {
+      "mirror": "https://npm.taobao.org/mirrors/electron/"
+    },
+    "mac": {
+      "icon": "_output/lab/favicon.icns",
+      "target": "dmg"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "win": {
+      "icon": "_output/lab/favicon.ico",
+      "legalTrademarks": "kavout",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": false
+    }
+  },
+  "linux": {
+    "icon": "_output/lab/favicon.ico",
+  },
+  "author": "Shurong",
   "license": "MIT",
   "devDependencies": {
-    "electron": "13.1.7"
+    "electron": "13.1.7",
+    "electron-builder": "^22.11.7"
   },
   "dependencies": {
-    "http-server": "^0.12.3"
+    "node-static": "^0.7.11"
   }
 }

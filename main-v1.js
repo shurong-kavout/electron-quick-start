@@ -7,8 +7,8 @@ const { app, BrowserWindow, BrowserView, screen } = require('electron')
 const path = require('path')
 
 async function createServer() {
-    const httpServer = require('http-server');
-    httpServer.createServer({ root: '_output' }).listen(8000);
+    const { fork } = require('child_process')
+    const ps = fork(path.join(__dirname, 'server.js'))
 }
 
 async function createWindow() {
