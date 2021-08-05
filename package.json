@@ -14,6 +14,7 @@
   "build": {
     "appId": "com.kavout.jupyterlite",
     "productName": "KavoutLite",
+    "artifactName": "${productName}-v${version}.${ext}",
     "copyright": "@ 2021 Kavout",
     "compression": "maximum",
     "directories": {
