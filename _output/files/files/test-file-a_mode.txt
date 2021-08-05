@@ -1,0 +1,4 @@
+a mode opens an existing file, write file pointer jumps to the end
+a mode to open an existing file, write for "append"
+a mode opens an existing file, write file pointer jumps to the end
+a mode to open an existing file, write for "append"
