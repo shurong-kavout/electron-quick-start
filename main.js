@@ -12,7 +12,7 @@ async function createServer() {
 }
 
 async function createWindow() {
-    shell.openExternal('http://127.0.0.1:8000/lab/')
+    shell.openExternal('http://127.0.0.1:8081/lab/')
 }
 
 
