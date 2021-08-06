@@ -29,7 +29,7 @@ async function createWindow() {
         width: true,
         height: true,
     })
-    view.webContents.loadURL('http://127.0.0.1:8081/lab/')
+    view.webContents.loadURL('http://127.0.0.1:8082/lab/')
 }
 
 
