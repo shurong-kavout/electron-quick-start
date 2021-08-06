@@ -5,16 +5,18 @@
 // Modules to control application life and create native browser window
 const { app, shell } = require('electron')
 const path = require('path')
+const LITE_PORT = 8082
+const LITE_IDB = 'JupyterLite Storage'
 
 async function createServer() {
     const { fork } = require('child_process')
-    const ps = fork(path.join(__dirname, 'server.js'))
+    const child = fork(path.join(__dirname, 'server.js'))
+    child.send({ LITE_PORT });
 }
 
 async function createWindow() {
-    shell.openExternal('http://127.0.0.1:8082/lab/')
+    shell.openExternal(`http://127.0.0.1:${LITE_PORT}/lab/`)
 }
-
 
 let mainWindow;
 
@@ -22,6 +24,7 @@ let mainWindow;
     await app.whenReady();
     await createServer()
     await createWindow()
+    await clearIndexedDB()
 
     app.on('activate', function () {
         // On macOS it's common to re-create a window in the app when the

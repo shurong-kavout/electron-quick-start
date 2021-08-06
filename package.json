@@ -60,10 +60,10 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": false
+    },
+    "linux": {
+      "icon": "build/icon.ico"
     }
-  },
-  "linux": {
-    "icon": "build/icon.ico"
   },
   "author": "Shurong",
   "license": "MIT",
